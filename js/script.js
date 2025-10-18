@@ -69,18 +69,9 @@ const ctx = canvas.getContext('2d');
 let particles = [];
 
 function resizeCanvas() {
-    // Get the hero section
-    const heroSection = canvas.parentElement.parentElement;
-    
-    // Get the actual rendered width of the hero section
-    const width = heroSection.offsetWidth;
-    const height = heroSection.offsetHeight;
-    
-    // Set canvas internal resolution
-    canvas.width = width;
-    canvas.height = height;
-    
-    // CSS styling already handled by stylesheet
+    // Set canvas to full viewport size
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 }
 
 
